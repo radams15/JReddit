@@ -4,54 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbda2567-e2e0-4cc7-a7d7-f1be96d4c12c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/._Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid2578.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid2603.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid2627.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid2649.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid2677.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json-20070829.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/apple/dts/samplecode/osxadapter/OSXAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/adamh/utils/NativeUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/json/JsonUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/JReddit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/FileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/MacNet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/Net.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/OS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/UrlNet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Reddit/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Reddit/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Reddit/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Reddit/Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Reddit/Subreddit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/CommentsRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/CompactPostTableRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/GoodLookingPostTableRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/MainFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/OsxUiFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostTableModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/SettingsDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/native/._Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/native/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/native/uk_co_therhys_JReddit_Net_MacNet.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/native/uk_co_therhys_JReddit_Net_MacNet.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/JReddit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/libnet.dylib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/postMore.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/postView.png" afterDir="false" />
+    <list default="true" id="cbda2567-e2e0-4cc7-a7d7-f1be96d4c12c" name="Changes" comment="Committed now as I have removed hardcoded passwords and usernames!">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/Net.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/Net.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/OS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/OS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,8 +94,16 @@
       <workItem from="1655285915005" duration="17000" />
       <workItem from="1655482291152" duration="2705000" />
       <workItem from="1655558887279" duration="34000" />
-      <workItem from="1655730080647" duration="18970000" />
+      <workItem from="1655730080647" duration="20125000" />
     </task>
+    <task id="LOCAL-00001" summary="Committed now as I have removed hardcoded passwords and usernames!">
+      <created>1655750788775</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655750788775</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,5 +125,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Committed now as I have removed hardcoded passwords and usernames!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Committed now as I have removed hardcoded passwords and usernames!" />
   </component>
 </project>

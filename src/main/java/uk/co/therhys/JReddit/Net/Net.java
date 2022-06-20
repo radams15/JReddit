@@ -37,7 +37,7 @@ public class Net {
     }
 
     private static Net newNet(){
-        if(OS.getOS() == OS.OSX && ! OS.versionAbove("10.6.0")){ // If OSX < snow leopard use the library (ppc)
+        if(OS.getOS() == OS.OSX && ! OS.versionAbove("10.6")){ // If OSX < snow leopard use the library (ppc)
             return new MacNet();
         }else{
             return new UrlNet();
