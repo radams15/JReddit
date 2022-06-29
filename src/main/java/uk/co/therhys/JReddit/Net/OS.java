@@ -25,6 +25,7 @@ public class OS {
     }
 
     public static boolean versionAbove(String version){
+	try{
         String actual = getVersion();
         int lastDot = actual.lastIndexOf('.');
         actual = actual.substring(0, lastDot);
@@ -33,5 +34,8 @@ public class OS {
         int versioni = Integer.parseInt(version.replaceAll("\\.", ""));
 
         return actuali > versioni;
+	}catch(Exception e){
+		return false;
+	}
     }
 }

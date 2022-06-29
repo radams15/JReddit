@@ -1,9 +1,11 @@
 package uk.co.therhys.JReddit.UI;
 
 import apple.dts.samplecode.osxadapter.OSXAdapter;
+import uk.co.therhys.JReddit.Net.OS;
 import uk.co.therhys.JReddit.Reddit.Client;
 import uk.co.therhys.JReddit.Reddit.Config;
 import uk.co.therhys.JReddit.Reddit.Post;
+import uk.co.therhys.JReddit.Reddit.Subreddit;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -18,14 +20,15 @@ public class MainFrame extends JFrame implements Client.PostReceiver {
     private JPanel mainPanel;
     private PostTable postTable;
     private PostTableModel postModel;
+    private Subreddit currentSub = null;
 
+    private ActionListener goHomeListener;
+    private ActionListener goSubListener;
     private ActionListener postViewListener;
     private ActionListener morePostListener;
     private ActionListener aboutListener;
     private ActionListener quitListener;
     private ActionListener preferencesListener;
-
-    private final boolean isOsx = (System.getProperty("os.name").toLowerCase().startsWith("mac os x"));
 
     private static ImageIcon getIcon(String img){
         ImageIcon icon;
@@ -70,6 +73,11 @@ public class MainFrame extends JFrame implements Client.PostReceiver {
         fileMenu.add("Preferences").addActionListener(preferencesListener);
         menubar.add(fileMenu);
 
+        JMenu subMenu = new JMenu("Sub");
+        subMenu.add("Go").addActionListener(goSubListener);
+        subMenu.add("Home").addActionListener(goHomeListener);
+        menubar.add(subMenu);
+
         JMenu postMenu = new JMenu("Post");
         postMenu.add("View").addActionListener(postViewListener);
         postMenu.add("Get New").addActionListener(morePostListener);
@@ -89,12 +97,35 @@ public class MainFrame extends JFrame implements Client.PostReceiver {
             }
         };
 
+        goHomeListener = new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                postModel.clear();
+
+                new PostLoader(client, null, frameRef).start();
+            }
+        };
+
+        goSubListener = new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                GoSubDlg dlg = new GoSubDlg(client);
+                dlg.setModal(true);
+                dlg.setVisible(true);
+
+                Subreddit sub = dlg.getSelected();
+
+                if(sub != null) {
+                    postModel.clear();
+
+                    new PostLoader(client, sub, null, frameRef).start();
+                }
+            }
+        };
+
         morePostListener = new ActionListener() {
             public void actionPerformed(ActionEvent actionEvent) {
-                client.getHot(
-                        ((Post) postModel.getValueAt(postModel.getRowCount()-1, postModel.getColumnCount()-1)).id,
-                        frameRef
-                );
+                Post prev = ((Post) postModel.getValueAt(postModel.getRowCount()-1, postModel.getColumnCount()-1));
+
+                new PostLoader(client, prev.id, frameRef).start();
             }
         };
 
@@ -127,7 +158,7 @@ public class MainFrame extends JFrame implements Client.PostReceiver {
             }
         };
 
-        if(isOsx){
+        if(OS.getOS() == OS.OSX){
             OSXAdapter.setQuitHandler(this, quitListener);
             OSXAdapter.setAboutHandler(this, aboutListener);
             OSXAdapter.setPreferencesHandler(this, preferencesListener);
@@ -184,7 +215,7 @@ public class MainFrame extends JFrame implements Client.PostReceiver {
         createMenubar();
         createToolbar();
 
-        client.getHot(null, this);
+        new PostLoader(client, null, this).start();
     }
 
     public MainFrame(Client client, Config conf){
@@ -193,7 +224,7 @@ public class MainFrame extends JFrame implements Client.PostReceiver {
 
         Image appIcon = getIcon("JReddit.png").getImage();
         setIconImage(appIcon);
-        if(isOsx){
+        if(OS.getOS() == OS.OSX){
             OSXAdapter.setApplicationIcon(this, appIcon);
         }
 

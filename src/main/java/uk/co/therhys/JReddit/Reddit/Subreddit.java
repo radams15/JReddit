@@ -11,9 +11,9 @@ public class Subreddit {
     public String url;
     private final Client client;
 
-    public Subreddit(Client client, String name, String url){
+    public Subreddit(Client client, String name){
         this.name = name;
-        this.url = url;
+        this.url = "/r/" + name + "/";
         this.client = client;
     }
 

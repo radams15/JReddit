@@ -9,7 +9,9 @@ import uk.co.therhys.JReddit.Net.Net;
 import uk.co.therhys.JReddit.Net.OS;
 import uk.co.therhys.JReddit.Net.Result;
 
+import javax.swing.*;
 import java.io.File;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -33,6 +35,7 @@ public class Post {
         List out = new ArrayList();
 
         JSONArray listing = res.toJsonArray();
+        JSONObject comment;
 
         for(int i=0 ; i<listing.length() ; i++){
             try {
@@ -40,13 +43,16 @@ public class Post {
                 JSONArray children = data.getJSONArray("children");
 
                 for(int x=0 ; x<children.length() ; x++) {
-                    out.add(
-                            new Comment(this, children.getJSONObject(x))
-                    );
+                    comment = children.getJSONObject(x);
+                    if(comment != null) {
+                        out.add(
+                                new Comment(this, comment)
+                        );
+                    }
                 }
 
             }catch (JSONException e){
-                //e.printStackTrace();
+                // Do nothing
             }
         }
 
@@ -78,7 +84,7 @@ public class Post {
 
         String subredditName = JsonUtil.getJsonString(childData, "subreddit");
 
-        subreddit = new Subreddit(client, subredditName, "/r/"+subredditName+"/");
+        subreddit = new Subreddit(client, subredditName);
 
         title = JsonUtil.getJsonString(childData, "title");
         author = JsonUtil.getJsonString(childData, "author");
@@ -141,24 +147,32 @@ public class Post {
         }
     }
 
+    private String cacheDir(){
+        switch (OS.getOS()) {
+            case OS.OSX:
+                return ("/Users/"+OS.getUsername()+"/Library/JReddit/cache/");
+
+            case OS.LINUX:
+                return("/home/"+OS.getUsername()+"/.cache/JReddit/");
+
+            default:
+                return("/JReddit/cache/");
+        }
+    }
+
     public File getThumbFile() {
         if (hasThumbnail()) {
+            if(thumbnail.equals("nsfw")){
+                return new File(cacheDir() + "nsfw.png");
+            }else if(thumbnail.equals("spoiler")){
+                return new File(cacheDir() + "spoiler.png");
+            }else if(thumbnail.equals("default")){
+                return new File(cacheDir() + "default.png");
+            }
+
             String uid = id + "_thumb." + FileUtils.getExtension(thumbnail);
 
-            File imgFile;
-            switch (OS.getOS()) {
-                case OS.OSX:
-                    imgFile = new File("/Users/"+OS.getUsername()+"/Library/JReddit/cache/" + uid);
-                    break;
-
-                case OS.LINUX:
-                    imgFile = new File("/home/"+OS.getUsername()+"/.cache/JReddit/" + uid);
-                    break;
-
-                default:
-                    imgFile = new File("/JReddit/cache/" + uid);
-                    break;
-            }
+            File imgFile = new File(cacheDir() + uid);
 
             if (!imgFile.getParentFile().exists()) {
                 boolean success = imgFile.getParentFile().mkdirs();

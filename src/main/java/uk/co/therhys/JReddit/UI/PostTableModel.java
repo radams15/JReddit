@@ -21,4 +21,9 @@ public class PostTableModel extends DefaultTableModel {
                 post
         });
     }
+
+    public void clear(){
+        getDataVector().removeAllElements();
+        fireTableDataChanged();
+    }
 }

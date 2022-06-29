@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbda2567-e2e0-4cc7-a7d7-f1be96d4c12c" name="Changes" comment="Committed now as I have removed hardcoded passwords and usernames!">
+    <list default="true" id="cbda2567-e2e0-4cc7-a7d7-f1be96d4c12c" name="Changes" comment="Fixed os above detection with sub-releases over 9, e.g. 10.4.11 tiger which would be dectected as above snow-leopard when they were not.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/Base64.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/GoSubDlg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/Net.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/Net.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/OS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/OS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Reddit/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Reddit/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Reddit/Subreddit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Reddit/Subreddit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostTableModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,20 +42,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Volumes/share/scripts/java/JReddit/src/main/resources",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Volumes/share/scripts/java/JReddit&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -94,7 +100,10 @@
       <workItem from="1655285915005" duration="17000" />
       <workItem from="1655482291152" duration="2705000" />
       <workItem from="1655558887279" duration="34000" />
-      <workItem from="1655730080647" duration="20125000" />
+      <workItem from="1655730080647" duration="20202000" />
+      <workItem from="1655838758244" duration="1071000" />
+      <workItem from="1655905910371" duration="10000" />
+      <workItem from="1656514391693" duration="3239000" />
     </task>
     <task id="LOCAL-00001" summary="Committed now as I have removed hardcoded passwords and usernames!">
       <created>1655750788775</created>
@@ -103,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655750788775</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed os above detection with sub-releases over 9, e.g. 10.4.11 tiger which would be dectected as above snow-leopard when they were not.">
+      <created>1655751926393</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655751926393</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +142,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Committed now as I have removed hardcoded passwords and usernames!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Committed now as I have removed hardcoded passwords and usernames!" />
+    <MESSAGE value="Fixed os above detection with sub-releases over 9, e.g. 10.4.11 tiger which would be dectected as above snow-leopard when they were not." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed os above detection with sub-releases over 9, e.g. 10.4.11 tiger which would be dectected as above snow-leopard when they were not." />
   </component>
 </project>
