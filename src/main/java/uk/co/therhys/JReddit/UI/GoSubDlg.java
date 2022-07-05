@@ -1,7 +1,6 @@
 package uk.co.therhys.JReddit.UI;
 
-import uk.co.therhys.JReddit.Reddit.Client;
-import uk.co.therhys.JReddit.Reddit.Subreddit;
+import uk.co.therhys.CReddit.Subreddit;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,17 +10,17 @@ import java.util.List;
 
 public class GoSubDlg extends JDialog {
     private JComboBox choice;
-    private Client client;
+    private RedditClient client;
     private boolean complete = false;
 
-    public GoSubDlg(Client client){
+    public GoSubDlg(RedditClient client){
         this.client = client;
         choice = new JComboBox();
 
         List subs = client.getSubs();
 
         for(int i=0 ; i<subs.size() ; i++){
-            choice.addItem(((Subreddit)subs.get(i)).name);
+            choice.addItem(((Subreddit)subs.get(i)).getName());
         }
 
         JButton ok = new JButton("OK");
@@ -47,6 +46,6 @@ public class GoSubDlg extends JDialog {
         if(!complete) { return null; }
 
         String name = (String) choice.getSelectedItem();
-        return new Subreddit(client, name);
+        return new Subreddit(client.reddit, name);
     }
 }

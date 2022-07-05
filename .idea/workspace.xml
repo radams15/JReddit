@@ -4,35 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbda2567-e2e0-4cc7-a7d7-f1be96d4c12c" name="Changes" comment="Fixed base64 on non-sun JVMs, now allows user to load any subscribed subreddit.">
+    <list default="true" id="cbda2567-e2e0-4cc7-a7d7-f1be96d4c12c" name="Changes" comment="General fixing and re-ordering.">
       <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/CReddit/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/CReddit/Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/CReddit/Reddit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/CReddit/SWIGTYPE_p_Headers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/CReddit/SWIGTYPE_p_f_p_Comment_p_void_int__void.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/CReddit/SWIGTYPE_p_f_p_Post_p_void__void.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/CReddit/SWIGTYPE_p_p_void.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/CReddit/SWIGTYPE_p_std__string.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/CReddit/SWIGTYPE_p_std__vectorT_Post_p_t.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/CReddit/SWIGTYPE_p_std__vectorT_Subreddit_p_t.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/CReddit/SWIGTYPE_p_void.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/CReddit/Subreddit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/CReddit/libreddit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/CReddit/libredditJNI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/Post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/PostVector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/Reddit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SWIGTYPE_p_Headers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SWIGTYPE_p_f_p_Comment_p_void_int__void.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SWIGTYPE_p_f_p_Post_p_void__void.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SWIGTYPE_p_p_void.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SWIGTYPE_p_std__string.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SWIGTYPE_p_std__vectorT_Post_p_t.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SWIGTYPE_p_std__vectorT_Subreddit_p_t.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SWIGTYPE_p_void.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/Subreddit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SubredditVector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/libreddit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/libredditJNI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/RedditClient.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/native/libnet/._Makefile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/native/libnet/Makefile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/native/libreddit" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/libreddit.dylib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/JReddit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/JReddit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/Base64.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/Base64.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/Net.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/Net.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/UrlNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Net/UrlNet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Reddit/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/Reddit/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/OsxUiFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/OsxUiFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/GoSubDlg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/GoSubDlg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/GoodLookingPostTableRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/GoodLookingPostTableRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostTableModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/native/._Makefile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/native/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/native/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/native/uk_co_therhys_JReddit_Net_MacNet.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/native/libnet/uk_co_therhys_JReddit_Net_MacNet.h" afterDir="false" />
@@ -52,6 +57,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -136,7 +146,7 @@
       <workItem from="1656770919602" duration="694000" />
       <workItem from="1656771867033" duration="2636000" />
       <workItem from="1656939931380" duration="1337000" />
-      <workItem from="1657039605380" duration="820000" />
+      <workItem from="1657039605380" duration="4456000" />
     </task>
     <task id="LOCAL-00001" summary="Committed now as I have removed hardcoded passwords and usernames!">
       <created>1655750788775</created>
@@ -159,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656518312475</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="General fixing and re-ordering.">
+      <created>1657040507485</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657040507485</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +202,7 @@
     <MESSAGE value="Committed now as I have removed hardcoded passwords and usernames!" />
     <MESSAGE value="Fixed os above detection with sub-releases over 9, e.g. 10.4.11 tiger which would be dectected as above snow-leopard when they were not." />
     <MESSAGE value="Fixed base64 on non-sun JVMs, now allows user to load any subscribed subreddit." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed base64 on non-sun JVMs, now allows user to load any subscribed subreddit." />
+    <MESSAGE value="General fixing and re-ordering." />
+    <option name="LAST_COMMIT_MESSAGE" value="General fixing and re-ordering." />
   </component>
 </project>

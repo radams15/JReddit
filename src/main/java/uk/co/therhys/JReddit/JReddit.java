@@ -6,10 +6,11 @@ import uk.co.therhys.JReddit.Net.Net;
 import uk.co.therhys.JReddit.Net.OS;
 import uk.co.therhys.JReddit.Reddit.Client;
 import uk.co.therhys.JReddit.Reddit.Config;
-import uk.co.therhys.JReddit.Reddit.Post;
+import uk.co.therhys.CReddit.Post;
 import uk.co.therhys.JReddit.UI.MainFrame;
 import uk.co.therhys.JReddit.UI.PostFrame;
 import uk.co.therhys.JReddit.UI.PostLoader;
+import uk.co.therhys.JReddit.UI.RedditClient;
 
 import javax.swing.*;
 import java.util.HashMap;
@@ -58,16 +59,10 @@ public class JReddit {
             //TODO show login dialogue!
         }
 
-        Client client = new Client(conf);
+        RedditClient client = new RedditClient(conf);
 
-        /*MainFrame frame = new MainFrame(client, conf);
-        frame.setVisible(true);*/
-
-        client.getHot(null, new Client.PostReceiver() {
-            public void onPost(Post post) {
-                System.out.println(post.title);
-            }
-        });
+        MainFrame frame = new MainFrame(client, conf);
+        frame.setVisible(true);
 
         conf.save();
     }

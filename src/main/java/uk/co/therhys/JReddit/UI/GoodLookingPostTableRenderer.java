@@ -1,6 +1,6 @@
 package uk.co.therhys.JReddit.UI;
 
-import uk.co.therhys.JReddit.Reddit.Post;
+import uk.co.therhys.CReddit.Post;
 
 import javax.swing.*;
 import javax.swing.table.TableCellRenderer;

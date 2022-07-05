@@ -1,0 +1,3 @@
+[submodule "src/main/native/libreddit"]
+	path = src/main/native/libreddit
+	url = https://github.com/radams15/libreddit

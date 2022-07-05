@@ -2,20 +2,16 @@ package uk.co.therhys.JReddit.UI;
 
 import apple.dts.samplecode.osxadapter.OSXAdapter;
 import uk.co.therhys.JReddit.Net.OS;
-import uk.co.therhys.JReddit.Reddit.Client;
+import uk.co.therhys.CReddit.*;
 import uk.co.therhys.JReddit.Reddit.Config;
-import uk.co.therhys.JReddit.Reddit.Post;
-import uk.co.therhys.JReddit.Reddit.Subreddit;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableCellRenderer;
 import java.awt.*;
 import java.awt.event.*;
 import java.net.URL;
 
-public class MainFrame extends JFrame implements Client.PostReceiver {
-    private final Client client;
+public class MainFrame extends JFrame implements RedditClient.PostReceiver {
+    private final RedditClient client;
     private final Config conf;
     private JPanel mainPanel;
     private PostTable postTable;
@@ -125,7 +121,7 @@ public class MainFrame extends JFrame implements Client.PostReceiver {
             public void actionPerformed(ActionEvent actionEvent) {
                 Post prev = ((Post) postModel.getValueAt(postModel.getRowCount()-1, postModel.getColumnCount()-1));
 
-                new PostLoader(client, prev.id, frameRef).start();
+                new PostLoader(client, prev.getId(), frameRef).start();
             }
         };
 
@@ -218,7 +214,7 @@ public class MainFrame extends JFrame implements Client.PostReceiver {
         new PostLoader(client, null, this).start();
     }
 
-    public MainFrame(Client client, Config conf){
+    public MainFrame(RedditClient client, Config conf){
         this.client = client;
         this.conf = conf;
 

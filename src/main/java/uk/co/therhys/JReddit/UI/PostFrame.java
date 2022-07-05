@@ -1,10 +1,7 @@
 package uk.co.therhys.JReddit.UI;
 
-import uk.co.therhys.JReddit.Net.FileUtils;
-import uk.co.therhys.JReddit.Net.Net;
-import uk.co.therhys.JReddit.Net.OS;
-import uk.co.therhys.JReddit.Reddit.Comment;
-import uk.co.therhys.JReddit.Reddit.Post;
+import uk.co.therhys.CReddit.Comment;
+import uk.co.therhys.CReddit.Post;
 
 import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
@@ -36,10 +33,10 @@ public class PostFrame extends JFrame {
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
         setContentPane(new JScrollPane(mainPanel));
 
-        JTextArea titleLbl = OsxUiFactory.getInstance().getSizedLabel(post.title, 24);
+        JTextArea titleLbl = OsxUiFactory.getInstance().getSizedLabel(post.getTitle(), 24);
         mainPanel.add(titleLbl);
 
-        if(post.isImage()){
+        /*if(post.is_img()){
             System.out.println("Image");
             File imgFile = post.getImageFile();
 
@@ -48,10 +45,10 @@ public class PostFrame extends JFrame {
 
                 mainPanel.add(viewer);
             }
-        }
+        }*/
 
-        if(! post.text.equals("")) {
-            JTextArea selftextLbl = OsxUiFactory.getInstance().getSizedLabel(post.text);
+        if(! post.getText().equals("")) {
+            JTextArea selftextLbl = OsxUiFactory.getInstance().getSizedLabel(post.getText());
             mainPanel.add(selftextLbl);
         }
 
@@ -60,10 +57,10 @@ public class PostFrame extends JFrame {
         commentTree.setCellRenderer(new CommentsRenderer());
         mainPanel.add(commentTree);
 
-        List comments = post.getComments();
+        /*List comments = post.get_comments();
         addComments(comments);
         lastComment = (Comment) comments.get(comments.size()-1);
-        commentTree.expandRow(0);
+        commentTree.expandRow(0);*/
 
         mainPanel.add(commentTree);
 
@@ -81,7 +78,7 @@ public class PostFrame extends JFrame {
             }
 
             DefaultMutableTreeNode node = new DefaultMutableTreeNode(comment);
-            addComments(comment.children, node);
+            //addComments(comment.getChildren(), node);
             parent.add(node);
         }
     }

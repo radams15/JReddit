@@ -1,6 +1,6 @@
 package uk.co.therhys.JReddit.UI;
 
-import uk.co.therhys.JReddit.Reddit.Post;
+import uk.co.therhys.CReddit.Post;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,17 +23,18 @@ public class PostPanel extends JPanel {
             }
         }*/
 
-        JTextArea titleLbl = OsxUiFactory.getInstance().getSizedLabel(post.title, 20);
-        JTextArea authorLbl = OsxUiFactory.getInstance().getSizedLabel("By: " + post.author, 15);
-        JTextArea subLbl = OsxUiFactory.getInstance().getSizedLabel("r/" + post.subreddit.name, 15);
-        File file = post.getThumbFile();
+        JTextArea titleLbl = OsxUiFactory.getInstance().getSizedLabel(post.getTitle(), 20);
+        JTextArea authorLbl = OsxUiFactory.getInstance().getSizedLabel("By: " + post.getAuthor(), 15);
+        JTextArea subLbl = OsxUiFactory.getInstance().getSizedLabel("r/" + post.getSubreddit().getName(), 15);
 
         add(titleLbl);
+
+        /*File file = post.getThumbFile();
 
         if (file != null && file.exists()) {
             JLabel thumbnailImg = OsxUiFactory.getInstance().getImageViewer(file, thumbSize, thumbSize);
             add(thumbnailImg);
-        }
+        }*/
 
         add(authorLbl);
         add(subLbl);

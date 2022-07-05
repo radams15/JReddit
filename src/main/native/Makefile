@@ -1,7 +1,8 @@
-ARCH ?= ppc
-OSX_VER ?= 10.3
+net:
+	cd libnet && make ../../resources/libnet.dylib
 
-CFLAGS ?= -I /System/Library/Frameworks/JavaVM.framework/Headers/
-
-../resources/libnet.dylib:
-	gcc uk_co_therhys_JReddit_Net_MacNet.m -mmacosx-version-min=${OSX_VER} -arch ${ARCH} -fPIC -dynamiclib -o ../resources/libnet.dylib ${CFLAGS} -framework Foundation
+reddit:
+	cd libreddit/java && make libreddit.dylib
+	cp libreddit/java/libreddit.dylib ../resources
+	mkdir -p ../java/uk/co/therhys/CReddit
+	cp libreddit/java/*.java ../java/uk/co/therhys/CReddit
