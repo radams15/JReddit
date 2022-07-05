@@ -60,14 +60,8 @@ public class JReddit {
 
         Client client = new Client(conf);
 
-        /*MainFrame frame = new MainFrame(client, conf);
-        frame.setVisible(true);*/
-
-        client.getHot(null, new Client.PostReceiver() {
-            public void onPost(Post post) {
-                System.out.println(post.title);
-            }
-        });
+        MainFrame frame = new MainFrame(client, conf);
+        frame.setVisible(true);
 
         conf.save();
     }
