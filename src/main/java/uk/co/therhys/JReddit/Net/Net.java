@@ -38,8 +38,10 @@ public class Net {
 
     private static Net newNet(){
         if(OS.getOS() == OS.OSX && ! OS.versionAbove("10.6")){ // If OSX < snow leopard use the library (ppc)
+            System.out.println("Using NSHttpClient");
             return new MacNet();
         }else{
+            System.out.println("Using HTTPUrlConnection");
             return new UrlNet();
         }
     }

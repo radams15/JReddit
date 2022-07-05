@@ -31,7 +31,7 @@ public class OsxUiFactory {
     }
 
     public JTextArea getSizedLabel(String text, float fontSize){
-        JTextArea out = new JTextArea(text);
+        JTextArea out = new JTextArea(text, 1, text.length());
 
         out.setFont(out.getFont().deriveFont((float) fontSize));
 
@@ -39,6 +39,8 @@ public class OsxUiFactory {
         out.setWrapStyleWord(true);
         out.setEditable(false);
         out.setFocusable(false);
+
+        out.setMargin(new Insets(0, 0, 0, 0));
 
         out.setOpaque(false);
         out.setBorder(UIManager.getBorder("Label.border"));

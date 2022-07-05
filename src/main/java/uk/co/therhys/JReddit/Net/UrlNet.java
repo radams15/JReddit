@@ -5,10 +5,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.ByteBuffer;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import sun.misc.*;
 
 public class UrlNet extends Net {
 
@@ -24,7 +22,7 @@ public class UrlNet extends Net {
             http.setDoOutput(true);
 
             byte[] authBytes = (username+":"+password).getBytes("UTF-8");
-            String authStr = "Basic " + new BASE64Encoder().encode(authBytes);
+            String authStr = "Basic " + Base64.encode(authBytes);
             http.setRequestProperty("Authorization", authStr);
 
             for(int i=0 ; i<headers.entrySet().size() ; i++){
@@ -33,10 +31,9 @@ public class UrlNet extends Net {
                 http.setRequestProperty((String) entry.getKey(), (String) entry.getValue());
             }
 
-
             byte[] toSend = data.getBytes();
 
-            http.setFixedLengthStreamingMode(toSend.length);
+            //http.setFixedLengthStreamingMode(toSend.length);
             http.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
             http.connect();
 

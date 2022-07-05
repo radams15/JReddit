@@ -31,9 +31,13 @@ public class Client {
     }
 
     public void getHot(String after, PostReceiver receiver){
-        String url = "https://oauth.reddit.com/hot";
+        getHot(after, 1000, receiver);
+    }
+
+    public void getHot(String after, int limit, PostReceiver receiver){
+        String url = "https://oauth.reddit.com/hot?limit="+limit;
         if(after != null){
-            url += "?after=t3_"+after;
+            url += "&after=t3_"+after;
         }
 
         Result res = net.get(url, getHeaders());

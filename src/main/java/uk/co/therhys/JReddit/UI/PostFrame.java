@@ -33,25 +33,27 @@ public class PostFrame extends JFrame {
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
         JPanel mainPanel = new JPanel();
-        mainPanel.setLayout(new GridLayout(-1, 1));
-
-        JScrollPane scrollPane = new JScrollPane(mainPanel);
-        setContentPane(scrollPane);
+        mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
+        setContentPane(new JScrollPane(mainPanel));
 
         JTextArea titleLbl = OsxUiFactory.getInstance().getSizedLabel(post.title, 24);
         mainPanel.add(titleLbl);
 
         if(post.isImage()){
+            System.out.println("Image");
             File imgFile = post.getImageFile();
 
             if(imgFile != null) {
                 JLabel viewer = OsxUiFactory.getInstance().getImageViewer(imgFile);
+
                 mainPanel.add(viewer);
             }
         }
 
-        JTextArea selftextLbl = OsxUiFactory.getInstance().getSizedLabel(post.text);
-        mainPanel.add(selftextLbl);
+        if(! post.text.equals("")) {
+            JTextArea selftextLbl = OsxUiFactory.getInstance().getSizedLabel(post.text);
+            mainPanel.add(selftextLbl);
+        }
 
         commentTree = new JTree();
         commentTree.setRowHeight(0);
@@ -63,9 +65,11 @@ public class PostFrame extends JFrame {
         lastComment = (Comment) comments.get(comments.size()-1);
         commentTree.expandRow(0);
 
+        mainPanel.add(commentTree);
+
         setSize(600, 400);
 
-        pack();
+        //pack();
     }
 
     private void addComments(List comments, DefaultMutableTreeNode parent){
