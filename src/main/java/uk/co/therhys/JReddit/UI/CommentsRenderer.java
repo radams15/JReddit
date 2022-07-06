@@ -1,6 +1,6 @@
 package uk.co.therhys.JReddit.UI;
 
-import uk.co.therhys.JReddit.Reddit.Comment;
+import uk.co.therhys.CReddit.Comment;
 
 import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
@@ -51,8 +51,8 @@ public class CommentsRenderer extends DefaultTreeCellRenderer {
             Comment comment = (Comment) obj;
             StringBuffer body = new StringBuffer();
 
-            if(comment.body != null) {
-                final Matcher matcher = chunkPattern.matcher(comment.body);
+            if(comment.getBody() != null) {
+                final Matcher matcher = chunkPattern.matcher(comment.getBody());
 
                 while (matcher.find()) {
                     body.append(matcher.group(0));

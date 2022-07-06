@@ -101,21 +101,13 @@ public class Comment {
     return libredditJNI.Comment_url_get(swigCPtr, this);
   }
 
-  public void setChildren(SWIGTYPE_p_p_void value) {
-    libredditJNI.Comment_children_set(swigCPtr, this, SWIGTYPE_p_p_void.getCPtr(value));
+  public void setChildren(CommentVector value) {
+    libredditJNI.Comment_children_set(swigCPtr, this, CommentVector.getCPtr(value), value);
   }
 
-  public SWIGTYPE_p_p_void getChildren() {
+  public CommentVector getChildren() {
     long cPtr = libredditJNI.Comment_children_get(swigCPtr, this);
-    return (cPtr == 0) ? null : new SWIGTYPE_p_p_void(cPtr, false);
-  }
-
-  public void setNo_children(long value) {
-    libredditJNI.Comment_no_children_set(swigCPtr, this, value);
-  }
-
-  public long getNo_children() {
-    return libredditJNI.Comment_no_children_get(swigCPtr, this);
+    return (cPtr == 0) ? null : new CommentVector(cPtr, false);
   }
 
   public Comment() {

@@ -4,44 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbda2567-e2e0-4cc7-a7d7-f1be96d4c12c" name="Changes" comment="General fixing and re-ordering.">
-      <change afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/PostVector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/Reddit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SWIGTYPE_p_Headers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SWIGTYPE_p_f_p_Comment_p_void_int__void.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SWIGTYPE_p_f_p_Post_p_void__void.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SWIGTYPE_p_p_void.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SWIGTYPE_p_std__string.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SWIGTYPE_p_std__vectorT_Post_p_t.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SWIGTYPE_p_std__vectorT_Subreddit_p_t.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SWIGTYPE_p_void.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/Subreddit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SubredditVector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/libreddit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/libredditJNI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/RedditClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/native/libnet/._Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/native/libnet/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/native/libreddit" afterDir="false" />
+    <list default="true" id="cbda2567-e2e0-4cc7-a7d7-f1be96d4c12c" name="Changes" comment="Somewhat working with c++ library.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/CommentVector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/SWIGTYPE_p_std__vectorT_Comment_p_t.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/libreddit.dylib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/JReddit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/JReddit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/GoSubDlg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/GoSubDlg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/GoodLookingPostTableRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/GoodLookingPostTableRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/libredditJNI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/CReddit/libredditJNI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/CommentsRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/CommentsRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/CompactPostTableRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/CompactPostTableRenderer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/co/therhys/JReddit/UI/PostTableModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/native/._Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/native/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/native/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/native/uk_co_therhys_JReddit_Net_MacNet.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/native/libnet/uk_co_therhys_JReddit_Net_MacNet.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/native/uk_co_therhys_JReddit_Net_MacNet.m" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/native/libnet/uk_co_therhys_JReddit_Net_MacNet.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/native/libreddit" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/native/libreddit" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +93,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.uk.co.therhys.JReddit.JReddit" />
         <item itemvalue="Application.uk.co.therhys.JReddit.JReddit" />
       </list>
     </recent_temporary>

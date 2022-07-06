@@ -29,12 +29,16 @@ public class PostPanel extends JPanel {
 
         add(titleLbl);
 
-        /*File file = post.getThumbFile();
+        String thumbPath = post.get_thumb_path();
 
-        if (file != null && file.exists()) {
-            JLabel thumbnailImg = OsxUiFactory.getInstance().getImageViewer(file, thumbSize, thumbSize);
-            add(thumbnailImg);
-        }*/
+        if (! thumbPath.equals("")) {
+            File thumbFile = new File(thumbPath);
+
+            if(thumbFile.exists()) {
+                JLabel thumbnailImg = OsxUiFactory.getInstance().getImageViewer(thumbFile, thumbSize, thumbSize);
+                add(thumbnailImg);
+            }
+        }
 
         add(authorLbl);
         add(subLbl);

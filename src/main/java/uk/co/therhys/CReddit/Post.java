@@ -133,12 +133,32 @@ public class Post {
     return libredditJNI.Post_get_comments_t(swigCPtr, this, limit, after, SWIGTYPE_p_f_p_Comment_p_void_int__void.getCPtr(callback), SWIGTYPE_p_void.getCPtr(ptr));
   }
 
+  public CommentVector get_comments_list(long limit, String after) {
+    return new CommentVector(libredditJNI.Post_get_comments_list(swigCPtr, this, limit, after), true);
+  }
+
   public String fullname() {
     return libredditJNI.Post_fullname(swigCPtr, this);
   }
 
   public String full_url() {
     return libredditJNI.Post_full_url(swigCPtr, this);
+  }
+
+  public String get_save_path() {
+    return libredditJNI.Post_get_save_path(swigCPtr, this);
+  }
+
+  public String get_cache_path() {
+    return libredditJNI.Post_get_cache_path(swigCPtr, this);
+  }
+
+  public String get_image_path() {
+    return libredditJNI.Post_get_image_path(swigCPtr, this);
+  }
+
+  public String get_thumb_path() {
+    return libredditJNI.Post_get_thumb_path(swigCPtr, this);
   }
 
   public boolean is_img() {

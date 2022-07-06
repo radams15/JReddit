@@ -1,6 +1,6 @@
 package uk.co.therhys.JReddit.UI;
 
-import uk.co.therhys.JReddit.Reddit.Post;
+import uk.co.therhys.CReddit.Post;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
@@ -12,7 +12,7 @@ public class CompactPostTableRenderer extends DefaultTableCellRenderer {
 
         Post post = (Post) value;
 
-        String text = post.title + " by " + post.author + " (" + post.subreddit.name + ")";
+        String text = post.getTitle() + " by " + post.getAuthor() + " (" + post.getSubreddit().getName() + ")";
 
         return super.getTableCellRendererComponent(table, text, isSelected, hasFocus, row, column);
     }
